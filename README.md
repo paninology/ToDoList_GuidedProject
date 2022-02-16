@@ -1,2 +1,3 @@
 # ToDoList_GuidedProject
-Prectice for Git & View Controller
+Practice for Git & View Controller
+This project includes saving datas, delegate, ...
