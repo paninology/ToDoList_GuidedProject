@@ -17,13 +17,45 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ToDoCellIndentifier" id="F1V-iF-Vt9" customClass="ToDoCell" customModule="ToDoList" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="F1V-iF-Vt9" id="D3G-jS-tcr">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HwQ-Cp-a6j">
+                                            <rect key="frame" x="8" y="8" width="28" height="27"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" image="circle" catalog="system">
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
+                                            </state>
+                                            <state key="selected" image="checkmark.circle.fill" catalog="system">
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="completeButtonTapped:" destination="F1V-iF-Vt9" eventType="touchUpInside" id="kjE-WS-nY8"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UIS-qf-H1D">
+                                            <rect key="frame" x="44" y="11" width="350" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="HwQ-Cp-a6j" firstAttribute="centerY" secondItem="D3G-jS-tcr" secondAttribute="centerY" id="7Ya-FX-AOz"/>
+                                        <constraint firstItem="HwQ-Cp-a6j" firstAttribute="leading" secondItem="D3G-jS-tcr" secondAttribute="leading" constant="8" id="FCd-in-u1f"/>
+                                        <constraint firstItem="UIS-qf-H1D" firstAttribute="leading" secondItem="HwQ-Cp-a6j" secondAttribute="trailing" constant="8" symbolic="YES" id="GIC-A4-KEX"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="UIS-qf-H1D" secondAttribute="bottom" id="GpQ-6G-4Gt"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="UIS-qf-H1D" secondAttribute="trailing" id="fjh-O6-wZ2"/>
+                                        <constraint firstItem="UIS-qf-H1D" firstAttribute="top" secondItem="D3G-jS-tcr" secondAttribute="topMargin" id="yme-yl-xyV"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="isCompleteButton" destination="HwQ-Cp-a6j" id="btC-WP-d7l"/>
+                                    <outlet property="titleLabel" destination="UIS-qf-H1D" id="gk0-ej-Bh8"/>
                                     <segue destination="5le-Fe-f2h" kind="presentation" id="M2b-rl-OYM"/>
                                 </connections>
                             </tableViewCell>
@@ -200,7 +232,7 @@
                         <outlet property="dueDateDatePicker" destination="FwF-fV-njI" id="0zK-ye-mWT"/>
                         <outlet property="dueDateLabel" destination="4VS-rt-tTJ" id="gg2-xj-vtn"/>
                         <outlet property="isCompleteButton" destination="oKZ-gk-n7k" id="RgU-Pe-rRa"/>
-                        <outlet property="notesTextView" destination="XYE-Ks-y5N" id="9Mu-QD-fgS"/>
+                        <outlet property="notesTextView" destination="Wrq-en-lHZ" id="Mol-ig-ccG"/>
                         <outlet property="saveButton" destination="3Av-Va-pJE" id="IIn-Sv-zxP"/>
                         <outlet property="titleTextField" destination="ddG-IT-BAK" id="0g6-kB-GWZ"/>
                     </connections>
@@ -244,7 +276,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="M2b-rl-OYM"/>
+        <segue reference="g79-Oa-25M"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>

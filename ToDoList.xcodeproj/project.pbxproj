@@ -65,13 +65,13 @@
 				8F4E4F7C27B34CE7003D09AF /* AppDelegate.swift */,
 				8F4E4F7E27B34CE7003D09AF /* SceneDelegate.swift */,
 				8F4E4F9227B3533E003D09AF /* ToDo.swift */,
+				8F387B6D27BBA1C400EF0162 /* ToDoCell.swift */,
 				8F4E4F9027B34E7C003D09AF /* TodoTableViewController.swift */,
 				8F4E4F9427B3E00C003D09AF /* ToDoDetailTableViewController.swift */,
 				8F4E4F8227B34CE7003D09AF /* Main.storyboard */,
 				8F4E4F8527B34CE7003D09AF /* Assets.xcassets */,
 				8F4E4F8727B34CE7003D09AF /* LaunchScreen.storyboard */,
 				8F4E4F8A27B34CE7003D09AF /* Info.plist */,
-				8F387B6D27BBA1C400EF0162 /* ToDoCell.swift */,
 			);
 			path = ToDoList;
 			sourceTree = "<group>";
